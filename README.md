@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
+#Feature list
+
 Angular Universal,
 Routing with Lazy Loading,
 Template Driven Form
