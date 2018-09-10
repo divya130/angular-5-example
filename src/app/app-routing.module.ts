@@ -20,7 +20,11 @@ const appRouter: Routes = [
           {
           path: '',
           loadChildren: './modules/home/home.module#HomeModule'
-      }]
+      },
+      {
+        path: '',
+        loadChildren: './modules/users/users.module#UsersModule'
+    }]
   }
 ];
 

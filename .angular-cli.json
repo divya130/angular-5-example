@@ -1,7 +1,7 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "project": {
-        "name": "Angular 5 Example"
+        "name": "ng5universal"
     },
     "apps": [{
         "root": "src",
@@ -76,6 +76,7 @@
     },
     "defaults": {
         "styleExt": "css",
-        "component": {}
+        "component": {},
+        "serve": { "host": "0.0.0.0", "port": 4204 }
     }
 }

@@ -1,3 +1,27 @@
-<p>
-  home works!
-</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>List of Users</h4>
+            <table class="table">
+                <!-- <caption>List of Names</caption> -->
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users;let i =index;">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{user.first_name}}</td>
+                        <td>{{user.last_name}}</td>
+                        <td><a [routerLink]="['/user',user.id]">view</a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
