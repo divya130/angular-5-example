@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>List of Users</h4>
+            <input type="text" placeholder="search user" [(ngModel)]="searchtext">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users | filter: searchtext;let i =index;">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{user.first_name}}</td>
+                        <td>{{user.last_name}}</td>
+                        <td><a [routerLink]="['/user',user.id]">view</a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-12">
+            <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+        </div>
+    </div>
+
+    <pre class="card card-block card-header mb-3">
+      Page changed to: {{page}}
+    </pre>
+</div>

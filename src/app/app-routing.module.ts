@@ -7,7 +7,7 @@ import { LayoutComponent } from './shared/layout/layout.component';
 
 const appRouter: Routes = [
   {
-    path: '', redirectTo: 'home', pathMatch: 'full'
+    path: '', redirectTo: 'users', pathMatch: 'full'
   },
   {
     path: '',
