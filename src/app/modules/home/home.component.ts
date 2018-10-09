@@ -19,6 +19,7 @@ users: Array<any>;
       console.log(val);
       this.users = val.data;
     });
+     
 
   }
 }

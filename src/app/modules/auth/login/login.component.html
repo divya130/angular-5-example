@@ -1,21 +1,22 @@
-<div class="container margin-top">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-            <form (ngSubmit)="Login(f)" #f="ngForm">
-                <legend>Login</legend>
+<div class="margin-top body_background" style="background-image: url(../../../assets/images/background.jpg)">
+    
+        <div class="form_log">
+            <form (ngSubmit)="Login(f)" #f="ngForm" class="form_back">
+                <legend class="white text-center">Login</legend>
                 <div class="form-group">
-                    <label for="email">Email address</label>
+                    <label for="email" class=" ">Email address</label>
                     <input type="email" name="email" class="form-control" id="email" placeholder="Email" ngModel email #email="ngModel">
                     <div class="warning-text" *ngIf="!email.valid && email.touched ">Please enter a valid email</div>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password" class="">Password</label>
                     <input type="password" name="password" class="form-control" id="password" placeholder="Password" ngModel required minlength="6" #password="ngModel">
                     <div class="warning-text" *ngIf="!password.valid && password.touched">Minimum letters or numbers 6</div>
                 </div>
-                <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Login</button>
                 <a id="newUser" [routerLink]="['/register']">Register as New User</a>
+                <button [disabled]="!f.valid" type="submit" class="btn btn-primary float-right">Login</button>
+                
             </form>
         </div>
-    </div>
+    
 </div>

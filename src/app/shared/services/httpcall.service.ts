@@ -11,6 +11,7 @@ getHeaders() {
   return header;
 }
 getMethod(url): Observable<any> {
+  const headers = this.getHeaders()
     return this.http.get(environment.url + url);
 
   }

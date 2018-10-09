@@ -1,23 +1,29 @@
-<div class="container">
+<div class="container" *ngIf="totalItems>0">
     <div class="row">
-        <div class="col">
-            <h4>List of Users</h4>
-            <input type="text" placeholder="search user" [(ngModel)]="searchtext">
-            <table class="table">
-                <thead>
+        <!-- [hidden]="condition" -->
+                <div class="col">
+                    <div class="list_heading">
+            <h4 class="flex-6">List of Users</h4>
+            <input type="text" placeholder="search user" [(ngModel)]="searchtext" class="form-control flex-2"></div>
+            <table class="table table-striped table-dark">
+                <thead class="table_head">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">First</th>
                         <th scope="col">Last</th>
+                        <th>Onclick</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let user of users | filter: searchtext;let i =index;">
+                        <!-- {{user}} 
+                        {{user | json}} -->
                         <th scope="row">{{i+1}}</th>
                         <td>{{user.first_name}}</td>
                         <td>{{user.last_name}}</td>
-                        <td><a [routerLink]="['/user',user.id]">view</a></td>
+                        <td  (click)="routeto(user.id)" >view</td>                      
+                        <td><a [routerLink]="['/user',user.id]" [queryParams]="{username:user.first_name,userss:user.last_name}" >view</a></td>
                     </tr>
 
                 </tbody>
@@ -26,7 +32,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-12">
-            <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+            <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" class="justify-content-center"></pagination>
         </div>
     </div>
 

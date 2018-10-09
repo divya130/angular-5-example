@@ -7,6 +7,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { GeneralService } from './services/httpcall.service';
 import { FilterPipe } from './pipes/filter.pipe';
+import { PipedemoPipe } from './pipedemo.pipe';
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     LayoutComponent,
     FilterPipe
   ],
-  declarations: [LayoutComponent, FilterPipe],
+  declarations: [LayoutComponent, FilterPipe, PipedemoPipe],
    providers: [GeneralService]
 })
 export class SharedModule { }

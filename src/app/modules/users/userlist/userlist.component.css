@@ -1,0 +1,17 @@
+.table_head{
+    background: #258bc9 !important; 
+    color: #fff !important;
+}
+.list_heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 15px 0px;
+}
+.flex-6{
+    flex: 6;
+}
+.flex-2{
+    flex: 2;
+}
