@@ -1,0 +1,74 @@
+.bg-nav{
+    background: #063a4b;
+}
+nav a{
+    color: #fff;
+}
+nav ul a{
+    color: #fff;
+}
+.drop_down:hover .dropdow_content {
+    display: block!important;
+    opacity: 1;
+}
+.drp_shadow {
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+}
+.dropdow_content {
+    top: 0;
+    left: 9%;
+    background-color: #fff;
+    margin: 0;
+    display: none;
+    min-width: 100px;
+    max-height: 650px;
+    overflow-y: auto;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    will-change: width,height;
+}
+.dropdow_content ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.dropdow_content ul li {
+    line-height: 15px;
+    min-height: 20px;
+    cursor: pointer;
+}
+.dropdow_content ul li a {
+    padding: 8px 10px!important;
+    display: block;
+    color: gray;
+    font-size: 16px;
+    line-height: 22px;
+}
+.dropdow_content ul li a i{
+    margin: 0px 10px;
+}
+.nav-item a:hover{
+    color:#fff;
+}
+nav{
+    padding: 0px 0px 0px 15px;
+    line-height: 40px;
+
+}
+.profile-home-img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    line-height: 25px;
+    vertical-align: middle;
+    text-align: center;
+}
+.nav-link{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

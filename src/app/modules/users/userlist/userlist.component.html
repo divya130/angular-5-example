@@ -9,10 +9,13 @@
                 <thead class="table_head">
                     <tr>
                         <th scope="col">#</th>
+                        
                         <th scope="col">First</th>
                         <th scope="col">Last</th>
+                        <th>Email</th>
+                        <th>Phone</th>
                         <th>Onclick</th>
-                        <th>Action</th>
+                        <th class="text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,10 +23,14 @@
                         <!-- {{user}} 
                         {{user | json}} -->
                         <th scope="row">{{i+1}}</th>
+                        
                         <td>{{user.first_name}}</td>
                         <td>{{user.last_name}}</td>
-                        <td  (click)="routeto(user.id)" >view</td>                      
-                        <td><a [routerLink]="['/user',user.id]" [queryParams]="{username:user.first_name,userss:user.last_name}" >view</a></td>
+                        <td>Pending</td>
+                        <td>Pending</td>
+                        <td  (click)="routeto(user.id)" class="cursor-pointer" ><span>view</span> </td>                      
+                        <td class="text-center"><a [routerLink]="['/user',user.id]" [queryParams]="{username:user.first_name,userss:user.last_name}" class="view_button">view</a>
+                            <a href="" class="delete_button">Delete</a></td>
                     </tr>
 
                 </tbody>
@@ -35,8 +42,4 @@
             <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" class="justify-content-center"></pagination>
         </div>
     </div>
-
-    <pre class="card card-block card-header mb-3">
-      Page changed to: {{page}}
-    </pre>
 </div>
