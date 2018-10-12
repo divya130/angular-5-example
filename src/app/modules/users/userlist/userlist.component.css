@@ -15,3 +15,21 @@
 .flex-2{
     flex: 2;
 }
+.view_button {
+    padding: 5px 15px;
+    background: #fff;
+    vertical-align: top;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.delete_button{
+    padding: 5px 15px;
+    background: #fff;
+    vertical-align: top;
+    border-radius: 8px;
+    text-decoration: none;
+    color: red;
+}
+.cursor-pointer span{
+    cursor: pointer;
+}

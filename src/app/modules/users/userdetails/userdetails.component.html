@@ -1,23 +1,52 @@
 <div class="container">
-    <div class="row">
+    <div class="row pt-5 pb-5">
         <div class="col-md-6">
             <h5>Edit User</h5>
 
             <form [formGroup]="userForm" (ngSubmit)="submitted=true;userForm.valid;edituser();">
                 <div class="form-group has-feedback">
                     <label for="name">First Name:</label>
-                    <input type="text" class="form-control" formControlName="firstname" id="name" required>
+                    <input type="text" class="form-control" formControlName="firstname" id="name" placeholder="Firstname" required>
                     <div *ngIf="firstname.errors">
                         <p *ngIf="'firstname.errors.required' && submitted">First Name is required</p>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="email">Last Name:</label>
-                    <input type="text" class="form-control" formControlName="lastname" id="email" required>
+                    <input type="text" class="form-control" formControlName="lastname" id="email" placeholder="Lastname" required>
                     <div *ngIf="lastname.errors">
                         <p *ngIf="'lastname.errors.required' && submitted">Last Name is required</p>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label for="Company Name">Phone Number</label>
+                    <input type="number" class="form-control" placeholder="Phone Number" required>
+                   
+                </div>
+                <div class="form-group">
+                  <label for="Company Name">Email</label>
+                  <input type="email" class="form-control" placeholder="Email">
+                 
+              </div>
+              <div class="form-group">
+                <label for="blood">Address</label>
+                <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
+               
+            </div>
+                  
+                <div class="form-group">
+                  <label for="dob">Social Url</label>
+                  <input type="text" class="form-control" >
+                 
+              </div>
+    
+                  <div class="form-group">
+                    <label for="file">Photo</label>
+                    <input type="file" class="form-control" >
+                   
+                </div>
+    
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

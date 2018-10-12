@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './shared/layout/layout.component';
-
+import { AlwaysAuthGuard } from './shared/auth/auth.service';
 
 
 const appRouter: Routes = [
@@ -16,6 +16,7 @@ const appRouter: Routes = [
   {
       path: '',
       component: LayoutComponent,
+      canActivate: [AlwaysAuthGuard],
       children:[
           {
           path: '',
@@ -25,7 +26,8 @@ const appRouter: Routes = [
         path: '',
         loadChildren: './modules/users/users.module#UsersModule'
     }]
-  }
+  },
+ 
 ];
 
 @NgModule({
