@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+        <button (click)="increment()" class="btn-primary">Increment</button>
+        <div>Current Count: {{ count$ | async }}</div>
+        <button (click)="decrement()" class="btn-primary">Decrement</button>
+    
+        <button (click)="reset()" class="btn-info">Reset Counter</button>
+    </div>
+      
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  
+<div class="row">
+<div class="col-md-6">
+  <h2>Sorting Pipe</h2>
+  <input type="text" [(ngModel)]="search">
+<div *ngFor="let ar of array | filter:search">
+{{ar.name}}
+</div>
+</div>
+
+<div class="col-md-6">
+    <h2>Groupby Pipe</h2>
+  <div *ngFor="let ar of array | groupBy:'title'">
+<h5>
+    {{ar.key}}
+</h5>    
+    <div *ngFor="let sub of ar.value">
+      {{sub.name}}
+    </div>
+  </div>
+  </div>
+</div>
+</div>

@@ -25,7 +25,17 @@ const appRouter: Routes = [
       {
         path: '',
         loadChildren: './modules/users/users.module#UsersModule'
-    }]
+    },{
+      path: '',
+      loadChildren: './modules/anguelements/anguelements.module#AnguelementsModule'
+  },{
+    path: '',
+    loadChildren: './modules/pipes/pipes.module#PipesModule'
+},{
+  path: '',
+  loadChildren: './modules/stores/stores.module#StoresModule'
+}
+]
   },
  
 ];

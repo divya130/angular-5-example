@@ -7,8 +7,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { GeneralService } from './services/httpcall.service';
 import { FilterPipe } from './pipes/filter.pipe';
-import { PipedemoPipe } from './pipedemo.pipe';
 import {AlwaysAuthGuard} from './auth/auth.service';
+import { GroupByPipe } from './pipes/groupby.pipe';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,9 +18,10 @@ import {AlwaysAuthGuard} from './auth/auth.service';
   ],
   exports: [
     LayoutComponent,
-    FilterPipe
+    FilterPipe,
+    GroupByPipe
   ],
-  declarations: [LayoutComponent, FilterPipe, PipedemoPipe],
+  declarations: [LayoutComponent, FilterPipe,GroupByPipe],
    providers: [GeneralService, AlwaysAuthGuard]
 })
 export class SharedModule { }
